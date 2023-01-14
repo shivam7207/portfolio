@@ -1,10 +1,15 @@
 .nav-container{
-  min-height: 5rem;
-  background: var(--header-background-clor);
+  min-height: var(--header-height);
+  background: var(--header-background-color);
   box-shadow: var(--box-shadow);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 99;
+}
+
+.brandname{
+  font-size: calc(var(--header-font-size) * 1.7);
+  font-weight: 500;
 }
 
 .nav-list-container{
@@ -18,7 +23,6 @@
 .nav-lists{
   text-decoration: none;
   display: inline;
-  font-size: 1.3rem;
   font-weight: 600;
   color: #fff;
   margin: 1rem;
@@ -28,8 +32,7 @@
   transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
   box-shadow: var(--box-shadow);
   display: flex;
-  align-items: center;
-  padding: 0.4rem;
+  padding: 0.6rem;
   border-radius: 7px;
   text-decoration: none;
   color: #000;
@@ -41,6 +44,28 @@
   background-color: red;
 }
 
+span{
+  font-size: calc(var(--header-font-size) * 1.2);
+}
 
+.material-symbols-rounded{
+  font-size: calc(var(--header-font-size) * 1.6);
+}
 
+.logo{
+  height: calc(var(--header-font-size) * 2.5);
+  width: calc(var(--header-font-size) * 4);
+}
 
+/* styles for screens between 360px and 720px */
+@media (min-width: 360px) and (max-width: 720px) {
+  .brandname{
+    font-size: calc(var(--header-font-size) * 1.2);
+    font-weight: 500;
+  }
+
+  .logo{
+    height: calc(var(--header-font-size) * 1.5);
+    width: calc(var(--header-font-size) * 2);
+  }
+}

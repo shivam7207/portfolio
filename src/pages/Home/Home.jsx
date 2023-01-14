@@ -1,87 +1,39 @@
 import React from "react";
+import { motion } from "framer-motion";
 import ArticleCard from "../../components/cards/ArticleCard";
-import Carousel from "../../components/carousel/Carousel";
+import Slides from "../../components/carousel/Slides";
 import Footer from "../../components/Footer/Footer";
-import "./Home.scss";
 
-const Landing = () => {
+const Home = () => {
   return (
-    <div>
-      <div className="carousel-main-container">
-        <Carousel />
+    <div className="flex  flex-col  pt-28">{/* main-container */}
+      <div className="bg-slate-400"> {/* carousel */}
+        <Slides />
       </div>
-      <div id="article-cont">
-        <div id="article-name">
-          <section className="art-sec"><span class="material-symbols-rounded">
-pacemaker
-</span>Health</section>
-          <section className="art-sec"><span class="material-symbols-rounded">
-fitness_center
-</span>Fitness</section>
-          <section className="art-sec"><span class="material-symbols-rounded">
-restaurant
-</span>Diet</section>
-          <section className="art-sec"><span class="material-symbols-rounded">
-nutrition
-</span>Nutritions</section>
-
+      {/* Article container starts from here */}
+      <div className="xl:grid  xl:grid-col-2  xl:grid-flow-col sm:grid sm:grid-row-2 sm: grid-flow-row">
+        {/* in this div category list lies */}
+        <div className="bg-slate-800  p-4  xl:grid grid-flow-row  xl:col-span-1 xl:gap-4">
+          <motion.div
+          className="bg-slate-300 h-24 rounded"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+          ></motion.div>
+          <section className="bg-slate-300  h-24  rounded"></section>
+          <section className="bg-slate-300  h-24  rounded"></section>
+          <section className="bg-slate-300  h-24  rounded"></section>
         </div>
-        <div id="article-cards" className="row">
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              padding: "1rem",
-              margin: "0.5rem",
-            }}
-          >
-            <ArticleCard />
-            <ArticleCard />
-            <ArticleCard />
-          </div>
+        {/* in this div the category cards are shown */}
+        <div className="col-span-3 bg-slate-800 xl:py-16 px-4 xl:grid xl:grid-flow-col xl:gap-4">
+          <section className="bg-slate-300 rounded"></section>
+          <section className="bg-slate-300 rounded"></section>
+          <section className="bg-slate-300 rounded"></section>
         </div>
       </div>
-      <div className="article-container">
-        <label className="article-label">Videos</label>
-        <div className="article-list-container">
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-        </div>
-      </div>
-      <div className="article-container p-3">
-        <label className="article-label">Tools</label>
-        <div className="row g-3">
-          <div className="col">
-            <ArticleCard />
-          </div>{" "}
-          <div className="col">
-            <ArticleCard />
-          </div>
-          <div className="col">
-            <ArticleCard />
-          </div>
-        </div>
-      </div>
-
-      <div className="footer">
-        <Footer />
-      </div>
+      <div className="bg-slate-800 h-96"></div>
     </div>
   );
 };
 
-export default Landing;
+export default Home;

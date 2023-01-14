@@ -1,82 +1,65 @@
 import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Header.scss";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { debounce } from "debounce";
-import img from "../../assets/react.svg"
+import img from "../../assets/react.svg";
 
 const Header = () => {
   return (
-      <Navbar className="nav-container fixed-top">
-        <Container>
-          <Navbar.Brand f="#home">
-            <img
-              alt=""
-              src={img}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{" "}
-            React Bootstrap
-          </Navbar.Brand>
+    <Navbar expand="xl" className="nav-container fixed-top">
+      <Container fluid>
+        <Navbar.Brand href="#home">
+          <img
+            src={img}
+            width="30"
+            height="30"
+            className="logo d-inline-block align-top"
+            alt="React Bootstrap logo"
+          />{" "}
+          <span className="brandname">React Bootstrap</span>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link>
-              <Link
-                to="/"
-                className="link"
-                style={{
-                  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-                  display: "flex",
-                  alignItems: "center",
-                  padding: "0.4rem",
-                  borderRadius: "7px",
-                }}
-              >
+            <Nav.Link href="#home">
+              {" "}
+              <Link to="/" className="link">
                 <span class="material-symbols-rounded">home</span>
-                <span style={{ fontSize: "1.2rem" }}>home</span>
-              </Link>
+                <span>Home</span>
+              </Link>{" "}
             </Nav.Link>
-            <Nav.Link>
-              <Link
-                to="/store"
-                className="link"
-              >
+            <Nav.Link href="#home">
+              {" "}
+              <Link to="/store" className="link">
                 <span class="material-symbols-rounded">store</span>
-                <span style={{ fontSize: "1.2rem" }}>Store</span>
-              </Link>
+                <span>Store</span>
+              </Link>{" "}
             </Nav.Link>
             <Nav.Link>
-              <Link
-                to="/diet"
-                className="link"
-              >
+              <Link to="/diet" className="link">
                 <span class="material-symbols-rounded">nutrition</span>
-                <span style={{ fontSize: "1.2rem" }}>Diet</span>
+                <span>Diet</span>
               </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link
-                to="/blogs"
-                className="link"
-              >
+              <Link to="/blogs" className="link">
                 <span class="material-symbols-rounded">article</span>
-                <span style={{ fontSize: "1.2rem" }}>Blogs</span>
+                <span>Blogs</span>
               </Link>
             </Nav.Link>
+
             <Nav.Link>
-              <Link
-                to="/tools"
-                className="link"
-              >
+              <Link to="/tools" className="link">
                 <span class="material-symbols-rounded">body_fat</span>
-                <span style={{ fontSize: "1.2rem" }}>Tools</span>
+                <span>Tools</span>
               </Link>
             </Nav.Link>
           </Nav>
-        </Container>
-      </Navbar>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
