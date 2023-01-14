@@ -1,5 +1,5 @@
 import React from "react";
-import Article from "../../components/cards/Article";
+import ArticleCard from "../../components/cards/ArticleCard";
 import Carousel from "../../components/carousel/Carousel";
 import Footer from "../../components/Footer/Footer";
 import "./Home.scss";
@@ -36,43 +36,43 @@ nutrition
               margin: "0.5rem",
             }}
           >
-            <Article />
-            <Article />
-            <Article />
+            <ArticleCard />
+            <ArticleCard />
+            <ArticleCard />
           </div>
         </div>
       </div>
       <div className="article-container">
         <label className="article-label">Videos</label>
         <div className="article-list-container">
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
-          <Article />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
         </div>
       </div>
       <div className="article-container p-3">
         <label className="article-label">Tools</label>
         <div className="row g-3">
           <div className="col">
-            <Article />
+            <ArticleCard />
           </div>{" "}
           <div className="col">
-            <Article />
+            <ArticleCard />
           </div>
           <div className="col">
-            <Article />
+            <ArticleCard />
           </div>
         </div>
       </div>

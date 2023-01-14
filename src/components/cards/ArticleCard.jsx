@@ -1,9 +1,9 @@
 import React from "react";
 import img from "../../assets/img1.png";
 import Card from "react-bootstrap/Card";
-import "./Article.scss";
+import "./ArticleCard.scss";
 
-const article = () => {
+const ArticleCard = () => {
   return (
     <div  className="card-container">
       <Card>
@@ -19,4 +19,4 @@ const article = () => {
   );
 };
 
-export default article;
+export default ArticleCard;

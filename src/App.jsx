@@ -7,6 +7,7 @@ import Calculator from "./pages/Tools/Tools";
 import Landing from "./pages/Home/Home";
 
 function App() {
+
   return (
     <div>
       <Header />

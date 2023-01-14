@@ -1,9 +1,9 @@
 .nav-container{
   min-height: 5rem;
-  background: rgba(255, 255, 255, 0);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3.6px);
-  -webkit-backdrop-filter: blur(2.6px);
+  background: var(--header-background-clor);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 99;
 }
 
@@ -26,7 +26,7 @@
 
 .link{
   transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   display: flex;
   align-items: center;
   padding: 0.4rem;

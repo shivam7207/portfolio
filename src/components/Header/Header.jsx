@@ -8,37 +8,8 @@ import { debounce } from "debounce";
 import img from "../../assets/react.svg"
 
 const Header = () => {
-  const [show, setShow] = useState(false);
-
-  const timer = debounce(() => {
-    setShow(false);
-    console.log(false);
-  }, 200);
-
-  let timeout = setTimeout(timer, 200);
-
-  const onEnter = debounce(() => {
-    if (!show) {
-      setShow(true);
-      console.log("entered:" + show);
-    }
-  }, 500);
-
-  const onLeave = debounce(() => {
-    if (show) {
-      clearTimeout(timeout);
-      timeout;
-    }
-  }, 500);
   return (
-    <div
-      style={{
-        position: "fixed",
-        zIndex: "999",
-        width: "100vw",
-      }}
-    >
-      <Navbar bg="transparent" className="nav-container">
+      <Navbar className="nav-container fixed-top">
         <Container>
           <Navbar.Brand f="#home">
             <img
@@ -55,8 +26,6 @@ const Header = () => {
               <Link
                 to="/"
                 className="link"
-                onMouseOver={onEnter}
-                onMouseLeave={onLeave}
                 style={{
                   boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
                   display: "flex",
@@ -108,12 +77,6 @@ const Header = () => {
           </Nav>
         </Container>
       </Navbar>
-      {show && (
-        <div className="category-container" onMouseEnter={onEnter}>
-          {show}
-        </div>
-      )}
-    </div>
   );
 };
 

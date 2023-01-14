@@ -1,5 +1,5 @@
 import React from "react";
-import Article from "../../components/cards/Article";
+import Article from "../../components/cards/ArticleCard";
 
 const calculator = () => {
   return (
